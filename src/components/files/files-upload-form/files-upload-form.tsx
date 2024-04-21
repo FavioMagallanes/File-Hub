@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { Button } from "../ui/button";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { DialogDescription, DialogHeader, DialogTitle } from "../ui/dialog";
+import { Button } from "../../ui/button";
+import { Label } from "../../ui/label";
+import { Input } from "../../ui/input";
+import { DialogDescription, DialogHeader, DialogTitle } from "../../ui/dialog";
 
 export const FilesUploadForm: FC = () => {
   return (

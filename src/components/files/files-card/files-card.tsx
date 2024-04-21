@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Button } from "../ui/button";
-import Icon from "../icon/icon";
+import { Button } from "../../ui/button";
+import Icon from "../../icon/icon";
 
 export const FilesCard: FC = () => {
   return (
