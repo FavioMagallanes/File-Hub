@@ -13,7 +13,7 @@ export const NotFoundPage: FC = () => {
           Oops, the page you're looking for doesn't exist.
         </p>
         <Link to="/">
-          <Button className="px-8 mt-6">Go back home</Button>
+          <Button className="px-8 mt-6" variant='outline'>Go back home</Button>
         </Link>
       </div>
     </div>
