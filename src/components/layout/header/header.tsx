@@ -1,5 +1,7 @@
 import { FC } from "react";
 import { Button } from "../../ui/button";
+import { Link } from "react-router-dom";
+
 import Icon from "../../icon/icon";
 
 export const Header: FC = () => {
@@ -10,7 +12,9 @@ export const Header: FC = () => {
         <p className="text-xl font-bold">FileHub</p>
       </div>
       <div className="ml-auto flex gap-2">
-        <Button variant="outline">Sign in</Button>
+        <Link to="/login">
+          <Button variant="outline">Sign in</Button>
+        </Link>
       </div>
     </header>
   );
