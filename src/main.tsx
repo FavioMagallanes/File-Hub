@@ -4,7 +4,7 @@ import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NotFoundPage } from "./pages/not-found-page/not-found-page.tsx";
 import { LoginPage } from "./pages/login-page/login-page.tsx";
-import { FilesFoldersPage } from "./pages/files-folders-page/files-page.tsx";
+import { FilesFoldersPage } from "./pages/files-folders-page/files-folders-page.tsx";
 import { FilesListPage } from "./pages/files-list-page/files-list-page.tsx";
 import { Layout } from "./components/layout/layout.tsx";
 import { ProtectedRoute } from "./components/protected-route/protected-route.tsx";

@@ -43,7 +43,11 @@ export const FilesFolderCard: FC<FilesFolderCardProps> = ({
       <div className="border-t border-gray-200 dark:border-gray-800 px-2 py-3 flex gap-2">
         <Dialog>
           <DialogTrigger asChild>
-            <Button className="w-full justify-start" size="sm" variant="outline">
+            <Button
+              className="w-full justify-start"
+              size="sm"
+              variant="outline"
+            >
               <Icon name="FilePlus2" className="w-4 h-4 mr-1" />
               Upload File{" "}
             </Button>
