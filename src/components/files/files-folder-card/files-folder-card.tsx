@@ -5,12 +5,13 @@ import { FilesUploadForm } from "../files-upload-form/files-upload-form";
 import { Dialog, DialogContent, DialogTrigger } from "../../ui/dialog";
 import { Button } from "../../ui/button";
 
-import Icon from "../../icon/icon";
+import  Icon  from '../../icon/icon'
 
 export const FilesFolderCard: FC<FilesFolderCardProps> = ({
   name,
   filesCount,
   filesTypes,
+  icon,
 }) => {
   return (
     <div className="bg-white dark:bg-gray-950 rounded-lg shadow-md overflow-hidden">
@@ -18,10 +19,7 @@ export const FilesFolderCard: FC<FilesFolderCardProps> = ({
         <div className="p-4">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center">
-              <Icon
-                name="Folder"
-                className="w-6 h-6 mr-2 text-gray-500 dark:text-gray-400"
-              />
+              {icon}
               <p className="font-medium text-gray-900 dark:text-gray-50 hover:underline">
                 {name}
               </p>
@@ -43,8 +41,8 @@ export const FilesFolderCard: FC<FilesFolderCardProps> = ({
               size="sm"
               variant="outline"
             >
-              <Icon name="FilePlus2" className="w-4 h-4 mr-1" />
-              Upload File{" "}
+              <Icon name="Upload" className="w-4 h-4 mr-2" />
+              Upload File
             </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
@@ -52,7 +50,7 @@ export const FilesFolderCard: FC<FilesFolderCardProps> = ({
           </DialogContent>
         </Dialog>
         <Button className="ml-auto" size="sm" variant="outline">
-          <Icon name="Trash" className="w-4 h-4 mr-1" />
+          <Icon name="Trash" className="w-4 h-4 mr-2" />
           Delete
         </Button>
       </div>

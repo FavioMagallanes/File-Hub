@@ -1,9 +1,10 @@
 import { FC } from "react";
 import { Button } from "../../ui/button";
 import { FilesFolderCard } from "../files-folder-card/files-folder-card";
-import Icon from "../../icon/icon";
-import { Dialog,DialogTrigger,DialogContent } from '../../ui/dialog'
+import { Dialog, DialogTrigger, DialogContent } from "../../ui/dialog";
 import { FilesCreateFolderForm } from "../files-create-folder-form/files-create-folder-form";
+
+import Icon from "../../icon/icon";
 
 export const FilesFolderList: FC = () => {
   const FOLDERS = [
@@ -11,26 +12,31 @@ export const FilesFolderList: FC = () => {
       name: "Documents",
       filesCount: 20,
       filesTypes: "PDF, DOCX, PPTX",
+      icon: <Icon name="File" className="w-5 h-5 mr-2" />,
     },
     {
       name: "Images",
       filesCount: 30,
       filesTypes: "JPG, PNG, SVG",
+      icon: <Icon name="Image" className="w-5 h-5 mr-2" />,
     },
     {
       name: "Videos",
       filesCount: 15,
       filesTypes: "MP4, AVI, MKV",
+      icon: <Icon name="Video" className="w-5 h-5 mr-2" />,
     },
     {
       name: "Music",
       filesCount: 10,
       filesTypes: "MP3, WAV, FLAC",
+      icon: <Icon name="Music" className="w-5 h-5 mr-2" />,
     },
     {
       name: "Others",
       filesCount: 5,
       filesTypes: "ZIP, RAR, PSD",
+      icon: <Icon name="File" className="w-5 h-5 mr-2" />,
     },
   ];
 
@@ -41,7 +47,7 @@ export const FilesFolderList: FC = () => {
         <div className="flex items-center space-x-2">
           <Dialog>
             <DialogTrigger asChild>
-              <Button >
+              <Button>
                 <Icon name="FolderPlus" className="w-4 h-4 mr-2" />
                 New Folder
               </Button>
@@ -59,6 +65,7 @@ export const FilesFolderList: FC = () => {
             name={folder.name}
             filesCount={folder.filesCount}
             filesTypes={folder.filesTypes}
+            icon={folder.icon}
           />
         ))}
       </div>
