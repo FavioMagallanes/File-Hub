@@ -1,16 +1,11 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
+import { FilesFolderCardProps } from "../../../types/interfaces";
 import { FilesUploadForm } from "../files-upload-form/files-upload-form";
 import { Dialog, DialogContent, DialogTrigger } from "../../ui/dialog";
 import { Button } from "../../ui/button";
 
 import Icon from "../../icon/icon";
-import { Link } from "react-router-dom";
-
-interface FilesFolderCardProps {
-  name: string;
-  filesCount: number;
-  filesTypes: string;
-}
 
 export const FilesFolderCard: FC<FilesFolderCardProps> = ({
   name,

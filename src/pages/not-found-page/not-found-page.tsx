@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { Button } from "../../components/ui/button";
 import { Link } from "react-router-dom";
+import { Button } from "../../components/ui/button";
+import { NOT_FOUND_TEXTS } from "../../constants/constants";
 
 export const NotFoundPage: FC = () => {
   return (
@@ -10,10 +11,12 @@ export const NotFoundPage: FC = () => {
           404
         </h1>
         <p className="text-2xl font-medium text-gray-500 dark:text-gray-400">
-          Oops, the page you're looking for doesn't exist.
+          {NOT_FOUND_TEXTS.OOPS}
         </p>
         <Link to="/">
-          <Button className="px-8 mt-6" variant='outline'>Go back home</Button>
+          <Button className="px-8 mt-6" variant="outline">
+            {NOT_FOUND_TEXTS.GO_BACK_HOME}
+          </Button>
         </Link>
       </div>
     </div>

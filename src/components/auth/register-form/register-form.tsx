@@ -1,28 +1,8 @@
 import { FC } from "react";
 import { Form } from "../../form/form";
+import { REGISTER_INPUTS_FORM } from "../../../constants/constants";
 
 export const RegisterForm: FC = () => {
-  const inputs = [
-    {
-      id: "name",
-      label: "Name",
-      placeholder: "Name",
-      type: "text",
-    },
-    {
-      id: "email",
-      label: "Email",
-      placeholder: "m@example.com",
-      type: "email",
-    },
-    {
-      id: "password",
-      label: "Password",
-      placeholder: "Password",
-      type: "password",
-    },
-  ];
-
   return (
     <Form
       title="Register to FileHub"
@@ -30,7 +10,7 @@ export const RegisterForm: FC = () => {
       path="/login"
       textRoute="Login now"
       textButton="Register"
-      inputs={inputs}
+      inputs={REGISTER_INPUTS_FORM}
     />
   );
 };

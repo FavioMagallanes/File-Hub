@@ -9,24 +9,10 @@ import {
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
 import { Label } from "../../components/ui/label";
-import Icon from "../../components/icon/icon";
 import { Link } from "react-router-dom";
+import { FormCardProps } from "../../types/interfaces";
 
-interface InputField {
-  id: string;
-  label: string;
-  placeholder: string;
-  type: string;
-}
-
-interface FormCardProps {
-  title: string;
-  description: string;
-  textRoute: string;
-  textButton: string;
-  path: string;
-  inputs: InputField[];
-}
+import Icon from "../../components/icon/icon";
 
 export const Form: FC<FormCardProps> = ({
   title,
@@ -90,9 +76,7 @@ export const Form: FC<FormCardProps> = ({
             ))}
           </CardContent>
           <CardFooter>
-            <Button className="w-full">
-              {textButton}
-            </Button>
+            <Button className="w-full">{textButton}</Button>
           </CardFooter>
         </Card>
       </div>

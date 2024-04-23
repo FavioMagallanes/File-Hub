@@ -23,7 +23,7 @@ export const Header: FC = () => {
     <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 border-b border-gray-200 dark:border-gray-800">
       <Link to="/">
         <div className="mr-6 flex items-center gap-3">
-          <Icon name="Mountain" className="h-5 w-5" />
+          <Icon name="FolderOpen" className="h-5 w-5" />
           <p className="text-xl font-bold">FileHub</p>
         </div>
       </Link>

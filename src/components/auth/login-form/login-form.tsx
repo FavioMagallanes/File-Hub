@@ -1,22 +1,8 @@
 import { FC } from "react";
 import { Form } from "../../form/form";
+import { LOGIN_INPUTS_FORM } from "../../../constants/constants";
 
 export const LoginForm: FC = () => {
-  const inputs = [
-    {
-      id: "email",
-      label: "Email",
-      placeholder: "m@example.com",
-      type: "email",
-    },
-    {
-      id: "password",
-      label: "Password",
-      placeholder: "Password",
-      type: "password",
-    },
-  ];
-
   return (
     <Form
       title="Login to FileHub"
@@ -24,7 +10,7 @@ export const LoginForm: FC = () => {
       path="/register"
       textRoute="Register now"
       textButton="Login"
-      inputs={inputs}
+      inputs={LOGIN_INPUTS_FORM}
     />
   );
 };

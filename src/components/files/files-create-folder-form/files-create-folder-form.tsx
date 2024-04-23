@@ -9,27 +9,9 @@ import {
   SelectItem,
 } from "../../ui/select";
 import { Button } from "../../ui/button";
+import { FILE_EXTENSIONS_OPTIONS } from "../../../constants/constants";
 
 export const FilesCreateFolderForm: FC = () => {
-  const fileExtensions: { value: string; label: string }[] = [
-    { value: "pdf", label: "PDF" },
-    { value: "doc", label: "Microsoft Word Document" },
-    { value: "docx", label: "Microsoft Word Document (Open XML)" },
-    { value: "xls", label: "Microsoft Excel Spreadsheet" },
-    { value: "xlsx", label: "Microsoft Excel Spreadsheet (Open XML)" },
-    { value: "ppt", label: "Microsoft PowerPoint Presentation" },
-    { value: "pptx", label: "Microsoft PowerPoint Presentation (Open XML)" },
-    { value: "txt", label: "Plain Text Document" },
-    { value: "jpg", label: "JPEG Image" },
-    { value: "jpeg", label: "JPEG Image" },
-    { value: "png", label: "Portable Network Graphics Image" },
-    { value: "gif", label: "Graphics Interchange Format Image" },
-    { value: "mp3", label: "MP3 Audio" },
-    { value: "wav", label: "Waveform Audio" },
-    { value: "mp4", label: "MP4 Video" },
-    { value: "avi", label: "Audio Video Interleave Video" },
-  ];
-
   return (
     <div className="mx-auto max-w-md space-y-6 py-12">
       <div className="space-y-2">
@@ -50,7 +32,7 @@ export const FilesCreateFolderForm: FC = () => {
               <SelectValue placeholder="Select file type" />
             </SelectTrigger>
             <SelectContent>
-              {fileExtensions.map(extension => (
+              {FILE_EXTENSIONS_OPTIONS.map(extension => (
                 <SelectItem key={extension.value} value={extension.value}>
                   {extension.label}
                 </SelectItem>
