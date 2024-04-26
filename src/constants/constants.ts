@@ -18,12 +18,14 @@ export const LOGIN_INPUTS_FORM = [
     label: "Email",
     placeholder: "m@example.com",
     type: "email",
+    isLoginForm: true,
   },
   {
     id: "password",
     label: "Password",
     placeholder: "Password",
     type: "password",
+    isLoginForm: true,
   },
 ];
 
@@ -33,18 +35,21 @@ export const REGISTER_INPUTS_FORM = [
     label: "Name",
     placeholder: "Name",
     type: "text",
+    isLoginForm: false,
   },
   {
     id: "email",
     label: "Email",
     placeholder: "m@example.com",
     type: "email",
+    isLoginForm: false,
   },
   {
     id: "password",
     label: "Password",
     placeholder: "Password",
     type: "password",
+    isLoginForm: false,
   },
 ];
 
