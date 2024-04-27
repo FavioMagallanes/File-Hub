@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import { z } from "zod";
+import { formSchema } from "@/constants/form-schema";
 
 export interface FilesFolderCardProps {
   name: string;
@@ -14,3 +16,5 @@ export interface FilesCardProps {
   date: string;
   icon: ReactNode;
 }
+
+export type FormSchemaType = z.infer<typeof formSchema>;

@@ -1,8 +1,7 @@
-import { FC, useState } from "react";
+import { FC } from "react";
+import { useToggleState } from "../../../hooks/use-toggle-state";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Button } from "../../ui/button";
 import {
   Card,
   CardContent,
@@ -10,22 +9,17 @@ import {
   CardHeader,
   CardTitle,
 } from "../../ui/card";
+import { Button } from "../../ui/button";
 import { Input } from "../../ui/input";
 import { Label } from "../../ui/label";
 import { Link } from "react-router-dom";
+import { FormSchemaType } from "../../../types/interfaces";
+import { formSchema } from "../../../constants/form-schema";
 
 import Icon from "../../icon/icon";
 
-const formSchema = z.object({
-  email: z.string().email("Invalid Email").min(6, "Too Short"),
-  password: z.string().min(6, "Too Short"),
-});
-
-type FormSchemaType = z.infer<typeof formSchema>;
-
 export const LoginForm: FC = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const togglePasswordVisibility = () => setShowPassword(!showPassword);
+  const [showPassword, setShowPassword] = useToggleState(false);
 
   const { register, handleSubmit } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
@@ -77,7 +71,7 @@ export const LoginForm: FC = () => {
                   className="absolute bottom-1 right-1 h-7 w-7"
                   size="icon"
                   variant="ghost"
-                  onClick={togglePasswordVisibility}
+                  onClick={setShowPassword}
                 >
                   <Icon
                     name={showPassword ? "EyeOff" : "Eye"}
